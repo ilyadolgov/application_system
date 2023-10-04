@@ -40,6 +40,7 @@ echo "</table>";
 }
 
 else{
+    
     header("Location: no_access.php");
 }
 
