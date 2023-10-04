@@ -46,6 +46,11 @@ if (isset($_POST['but'])) {
     $passwd = $_POST['passwd'];
     $passwd2 = $_POST['passwd2'];
 
+    if ($access=="Пользователь")
+        {$access=1;}
+    if ($access=="Администратор")
+        {$access=2;}
+
     if ($passwd<>$passwd2)
     {
         echo "<script>alert('Введенные пароли не совпадают')</script>";

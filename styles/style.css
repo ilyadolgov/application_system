@@ -248,3 +248,12 @@ span.psw {
   margin-left: 14px;
   width: 650px;
 }
+.tableadminka {
+  width: 100%;
+  border: 1px solid #dddddd;
+  border-collapse: collapse;
+}
+.tableadminka th {
+  background: #efefef;
+  font-weight: bold;
+}

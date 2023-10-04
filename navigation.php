@@ -13,8 +13,7 @@ session_start();
     <button class='dropbtn'> Заявки </button>
     <div class='dropdown-content'>
       <a href='new_application.php'>Новая заявка</a>
-      <a href='open_applications.php'>Открытые заявки</a>
-      <a href='completed_applications.php'>Закрытые заявки</a>
+      <a href='open_applications.php'>Все заявки</a>
     </div>
   </div> ";
   }
@@ -22,8 +21,9 @@ session_start();
     echo "<div class='dropdown'>
     <button class='dropbtn'> Заявки </button>
     <div class='dropdown-content'>
-      <a href='new_application.php'>Не обработанные заявки</a>
-      <a href='open_applications.php'>Закрытые заявки</a>
+      <a href='applications_received.php'>Поступившие заявки</a>
+      <a href='#'>Заявки принятые в работу</a>
+      <a href='#'>Все заявки</a>
     </div>
   </div> ";
     echo "<div class='dropdown'>
