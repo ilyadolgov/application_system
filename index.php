@@ -16,6 +16,9 @@ require_once ('navigation.php');
 if(!$_SESSION['username']){
 ?>  <p>Для создания заявки в IT отдел, необходимо пройти авторизацию пользователя</p>
     <button type="submit" onclick="document.getElementById('id01').style.display='block'">Авторизация</button>
+
+
+
 <?php
 }
 ?>

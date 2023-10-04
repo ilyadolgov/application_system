@@ -14,6 +14,7 @@ if(!$_SESSION['username']){
 <body>
 <?php
 $username = $_SESSION['username'];
+$displayname = $_SESSION['displayname'];
 require_once ('navigation.php');
 ?>
 <br>
@@ -21,7 +22,7 @@ require_once ('navigation.php');
 <form action='tel.php' method='POST'>
     <div class='aplications'>
     Тема заявки <input type='text' class="text-field__input" name = 'theme'>
-    Отправитель заявки<input type='text' name = 'sender' value=<?php echo $username; ?> readonly>
+    Отправитель заявки<input type='text' name = 'sender' value='<?php echo $displayname; ?>' readonly>
     Текст обращения <textarea name='appeal'></textarea>
 </textarea>
 <button type="submit">Отправить</button>

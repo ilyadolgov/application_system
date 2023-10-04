@@ -2,6 +2,7 @@
 
 <?php
 session_start();
+
 ?>
 <header>
 <div class="navbar">
@@ -28,8 +29,8 @@ session_start();
     echo "<div class='dropdown'>
     <button class='dropbtn'> Пользователи </button>
     <div class='dropdown-content'>
-      <a href='new_application.php'>Создание нового пользователя</a>
-      <a href='open_applications.php'>Смена пароля пользователя</a>
+      <a href='new_user.php'>Создание нового пользователя</a>
+      <a href='users.php'>Вывести пользователей</a>
     </div>
   </div> ";
   }
@@ -45,9 +46,10 @@ echo "<div class='float'>";
 }
 else {
   $usernm = $_SESSION['username'];
+  $displayname = $_SESSION['displayname'];
   echo "<div class='float'>";
   ?>
-  <welcome class='welc'>Добро пожаловать, <?php echo $usernm; ?> </welcome>
+  <welcome class='welc'>Добро пожаловать, <?php echo $displayname; ?> </welcome>
   <a href='logout.php'>Выйти</a>
   <?php "
   </div>";

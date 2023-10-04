@@ -9,14 +9,18 @@
     if (password_verify($passwd,$row['passwd'])) {
 
 //Скрипт проверки роли админа
-$query = "SELECT role.role FROM user INNER JOIN role ON user.id = role.name WHERE (((user.name)='$name'));";
+
+
+$query = "SELECT role.role, user.displayname FROM role INNER JOIN user ON role.id = user.role WHERE (((user.name)='$name'));";
 $result = $mysqli->query($query);
 while ($row=mysqli_fetch_array($result)) {
     $userrole = $row['role'];
+    $displayname = $row['displayname'];
 } 
 //Скрипт проверки роли админа
 
         $_SESSION['username'] = $name;
+        $_SESSION['displayname'] = $displayname;
         $_SESSION['user_role'] = $userrole;
         header("Location: index.php");
     }
